@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O que é HTML?</title>
+    <title>Informações do Arquivo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,49 +18,25 @@
             font-size: 18px;
             line-height: 1.6;
         }
-        code {
+        .dados {
             background-color: #e9ecef;
-            padding: 5px;
+            padding: 10px;
             border-radius: 4px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>O que é HTML?</h1>
-    <p>HTML (HyperText Markup Language) é a linguagem de marcação utilizada para criar páginas web. Ela permite estruturar o conteúdo e a apresentação de uma página na web.</p>
-    
-    <h2>Estrutura Básica de um Documento HTML</h2>
-    <p>Um documento HTML é composto por uma série de elementos e tags que definem o conteúdo da página. Abaixo, temos um exemplo de uma estrutura básica de um documento HTML:</p>
-    
-    <pre>
-        <code>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
-</head>
-<body>
-    <h1>Bem-vindo ao HTML!</h1>
-    <p>Esta é uma página simples criada com HTML.</p>
-</body>
-</html>
-        </code>
-    </pre>
+    <h1>Informações Extraídas do Arquivo</h1>
 
-    <h2>Principais Tags HTML</h2>
-    <ul>
-        <li><strong>&lt;html&gt;</strong>: Define o início do documento HTML.</li>
-        <li><strong>&lt;head&gt;</strong>: Contém metadados, como o título e a codificação de caracteres.</li>
-        <li><strong>&lt;body&gt;</strong>: Contém o conteúdo visível da página, como textos, imagens e links.</li>
-        <li><strong>&lt;h1&gt;</strong>, <strong>&lt;h2&gt;</strong>, etc.: São usadas para criar cabeçalhos e subcabeçalhos.</li>
-        <li><strong>&lt;p&gt;</strong>: Define um parágrafo de texto.</li>
-    </ul>
+    <div class="dados">
+        <h2>Nome: {{ dados.nome }}</h2>
+        <p><strong>Idade:</strong> {{ dados.idade }}</p>
+        <p><strong>Cidade:</strong> {{ dados.cidade }}</p>
+    </div>
 
-    <p>Com o HTML, podemos criar páginas web dinâmicas, interativas e visuais. Ele serve como a base para o desenvolvimento de qualquer site.</p>
-</body>
-</html>
-    </pre>
+    {% if dados.error %}
+        <p style="color: red;">Erro: {{ dados.error }}</p>
+    {% endif %}
 </body>
 </html>
