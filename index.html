@@ -1,42 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informações do Arquivo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .dados {
-            background-color: #e9ecef;
-            padding: 10px;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
+<html>
+<head><title>Informações das Bolinhas</title></head>
 <body>
-    <h1>Informações Extraídas do Arquivo</h1>
-
-    <div class="dados">
-        <h2>Nome: {{ dados.nome }}</h2>
-        <p><strong>Idade:</strong> {{ dados.idade }}</p>
-        <p><strong>Cidade:</strong> {{ dados.cidade }}</p>
-    </div>
-
-    {% if dados.error %}
-        <p style="color: red;">Erro: {{ dados.error }}</p>
-    {% endif %}
+<h1>Bolinhas Aleatórias</h1>
+<ul>
+<li><strong>Bolinhas 1:</strong><br>
+Posição: (200, 300)<br>
+Raio: 30 pixels<br>
+Cor: (0, 255, 0)<br>
+</li>
+...
+</ul>
 </body>
 </html>
